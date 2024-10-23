@@ -18,7 +18,7 @@ async fn main() {
 
     if args.len() < 3 {
         println!("Usage: ./buy_token <TOKEN_MINT> <AMOUNT_IN_SOL> [SLIPPAGE]");
-        println!("  TOPKEN_MINT: The mint of the token you want to buy");
+        println!("  TOKEN_MINT: The token you want to buy");
         println!("  AMOUNT_IN_SOL: SOL amount as a float, e.g. 1.0 = 1 SOL");
         println!("  SLIPPAGE: Optional slippage tolerance as a float, default is 0.10 (10%)");
         return;

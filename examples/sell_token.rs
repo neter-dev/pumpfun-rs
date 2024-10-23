@@ -17,7 +17,7 @@ async fn main() {
     let args: Vec<String> = env::args().collect();
 
     if args.len() < 2 {
-        println!("Usage: ./sell_token <TOKEN_MINT> <AMOUNT_TOKEN> [SLIPPAGE]");
+        println!("Usage: ./sell_token <TOKEN_MINT> [SLIPPAGE]");
         println!("  TOKEN_MINT: The mint of the token you want to buy");
         println!("  SLIPPAGE: Optional slippage tolerance as a float, default is 0.10 (10%)");
         return;
@@ -40,6 +40,12 @@ async fn main() {
     let mut pumpfun = PumpFunClient::new(RpcClient::new_with_commitment(rpc_url.to_string(), CommitmentConfig::confirmed()), &wallet);
 
     let balance = pumpfun.get_balance(&token).await.expect("Failed to get balance");
+    
+    if balance == 0 {
+        println!("No balance to sell");
+        return;
+    }
+    
     let metadata = get_token_metadata(&token).await.expect("Failed to get metadata");
 
     println!("Token {:} [{:}] - Balance {:}", metadata.name, metadata.symbol, balance);
