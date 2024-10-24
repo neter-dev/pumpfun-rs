@@ -1,11 +1,10 @@
 # PumpFun-RS
 
-PumpFun-RS is a simple Rust library for interacting with the PumpFun DeFi platform on the Solana blockchain.
+pumpfun-rs is a simple Rust library for interacting with the PumpFun DeFi platform on Solana.
 
 ## Disclaimer
 
-This library is still in development and should be used with caution. 
-By using this library you agree that the author is not responsible for any loss of funds or any other damages incurred.
+This library is still in development and should be used with caution. By using this library you agree that the author is not responsible for any loss of funds or any other damages incurred.
 
 Crypto trading is risky! Becareful out there.
 
@@ -20,9 +19,7 @@ Crypto trading is risky! Becareful out there.
 
 ## Installation
 
-```
-cargo add pumpfun-rs
-```
+Not yet available on crates.io, clone the github repo.
 
 ## Examples
 
@@ -68,5 +65,4 @@ async fn main() {
 
 ## License
 
-This project is licensed under the MIT License.
-```
+This project is licensed under the [MIT License](https://mit-license.org/).
