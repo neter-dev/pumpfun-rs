@@ -156,10 +156,6 @@ impl PumpFunClient {
         let amount_out_sol = (amount_in_token as f32 * price * 1000.0) as u64;
         let min_amount_out_sol = amount_out_sol - (amount_out_sol as f32 * slippage) as u64;
         
-        println!("Amount in token: {}", amount_in_token);
-        println!("Amount out sol: {}", amount_out_sol);
-        println!("Min amount out sol: {}", min_amount_out_sol);
-
         let mut ixs: Vec<Instruction> = Vec::new();
 
         if priority_fee > 0 {
